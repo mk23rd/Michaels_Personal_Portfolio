@@ -184,102 +184,7 @@ Locally preview the production build
 
 ---
 
-## 🎨 Customization
 
-### Updating Personal Information
-
-1. **Hero Section** - Edit `src/components/Hero.tsx`
-   ```tsx
-   // Update your name, title, and bio
-   ```
-
-2. **Skills** - Modify `src/components/Skills.tsx`
-   ```tsx
-   // Add/remove skills and adjust proficiency levels
-   const technicalSkills = [
-     { name: "JavaScript", proficiency: 60 },
-     // Add more skills...
-   ];
-   ```
-
-3. **Education** - Edit `src/components/Education.tsx`
-   ```tsx
-   // Update education and work experience timeline
-   const educationData = [
-     // Your education items...
-   ];
-   ```
-
-4. **Contact Information** - Update `src/components/Contact.tsx`
-   - Modify contact form settings
-   - Update social media links
-   - Supply EmailJS service/template IDs in `.env`
-
-### Styling & Theme
-
-- **Colors**: Edit `tailwind.config.ts` to customize color palette
-- **Fonts**: Update font families in `tailwind.config.ts`
-- **Animations**: Modify keyframes in `tailwind.config.ts`
-
-### Adding New Components
-
-The project uses shadcn/ui. To add new components:
-
-```bash
-npx shadcn-ui@latest add [component-name]
-```
-
----
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Visit [Vercel](https://vercel.com)
-3. Import your repository
-4. Vercel will auto-detect Vite configuration
-5. Click "Deploy"
-
-### Deploy to Netlify
-
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-2. Drag and drop the `dist` folder to [Netlify](https://app.netlify.com/drop)
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages:
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-2. Add deploy scripts to `package.json`:
-   ```json
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-3. Deploy:
-   ```bash
-   npm run deploy
-   ```
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
 
 ## 📝 License
 
@@ -294,20 +199,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - GitHub: [@mk23rd](https://github.com/mk23rd)
 - Project Link: [https://github.com/mk23rd/PersonalPortfolio](https://github.com/mk23rd/PersonalPortfolio)
 
----
 
-## 🙏 Acknowledgments
-
-- [React](https://reactjs.org/) - The web framework used
-- [TypeScript](https://www.typescriptlang.org/) - For type safety
-- [Vite](https://vitejs.dev/) - Build tool
-- [TailwindCSS](https://tailwindcss.com/) - For styling
-- [shadcn/ui](https://ui.shadcn.com/) - Component library
-- [Radix UI](https://www.radix-ui.com/) - Accessible primitives
-- [Lucide](https://lucide.dev/) - Icon library
-- [Hilcoe School of Computer Science and Technology](https://hilcoe.net/) - My educational institution
-
----
 
 <div align="center">
 

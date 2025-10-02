@@ -9,36 +9,13 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4.1-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.11-38bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-[Live Demo]([https://your-cloudflare-pages-url-here](https://a05743f7.michaels-personal-portfolio.pages.dev/)) • [Report Bug](https://github.com/mk23rd/PersonalPortfolio/issues) • [Request Feature](https://github.com/mk23rd/PersonalPortfolio/issues)
+[Live Demo](https://a05743f7.michaels-personal-portfolio.pages.dev/) • [Report Bug](https://github.com/mk23rd/PersonalPortfolio/issues) • [Request Feature](https://github.com/mk23rd/PersonalPortfolio/issues)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
 
-- [About the Project](#-about-the-project)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Project](#running-the-project)
-- [Project Structure](#-project-structure)
-- [Available Scripts](#-available-scripts)
-- [Customization](#-customization)
-- [Deployment](#-deployment)
-   - [Cloudflare Pages (Recommended)](#cloudflare-pages-recommended)
-   - [Automate with GitHub Actions](#automate-with-github-actions)
-   - [Manual CLI Deployment](#manual-cli-deployment)
-   - [Environment Variables on Cloudflare](#environment-variables-on-cloudflare)
-   - [Post-Deployment Tasks](#post-deployment-tasks)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
-- [Acknowledgments](#-acknowledgments)
-
----
 
 ## 🎯 About the Project
 

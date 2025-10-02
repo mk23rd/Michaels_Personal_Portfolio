@@ -29,6 +29,8 @@ const Hero = () => {
             )}>
               Recent <span className="text-gradient">Graduate</span> From Hilcoe School Of Computer Science And Technology
             </h1>
+            <span><br /></span>
+
           </div>
 
           <div className="overflow-hidden">

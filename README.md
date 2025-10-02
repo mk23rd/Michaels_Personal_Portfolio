@@ -9,7 +9,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4.1-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.11-38bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-[Live Demo](https://your-cloudflare-pages-url-here) • [Report Bug](https://github.com/mk23rd/PersonalPortfolio/issues) • [Request Feature](https://github.com/mk23rd/PersonalPortfolio/issues)
+[Live Demo]([https://your-cloudflare-pages-url-here](https://a05743f7.michaels-personal-portfolio.pages.dev/)) • [Report Bug](https://github.com/mk23rd/PersonalPortfolio/issues) • [Request Feature](https://github.com/mk23rd/PersonalPortfolio/issues)
 
 </div>
 
@@ -137,65 +137,6 @@ Before you begin, ensure you have the following installed on your system:
   npm --version
   ```
 
-## 🌐 Deployment
-
-> ✅ **Live Link Placeholder:** Update the `Live Demo` badge at the top of this README with your published Cloudflare Pages URL once you're live.
-
-### Cloudflare Pages (Recommended)
-
-1. **Create a Cloudflare account** (free tier is enough) and add a Pages project.
-2. **Connect your Git repository** or choose manual uploads.
-3. When prompted for build settings:
-   - **Framework preset:** `Vite`
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-   - **Node version:** `20` (matches the GitHub Action and local tooling)
-4. After the first successful build, replace the `Live Demo` link in this README with your production URL (e.g., `https://portfolio-yourname.pages.dev`).
-
-### Automate with GitHub Actions
-
-A reusable workflow lives at `.github/workflows/deploy-cloudflare-pages.yml`.
-
-- **Triggers:** every push to `main` (adjust the branch in the workflow if needed) and manual dispatch.
-- **Required GitHub secrets:**
-  - `CF_API_TOKEN` – Pages `Edit` token (create via Cloudflare Dashboard → My Profile → API Tokens → Create Token → `Pages` template).
-  - `CF_ACCOUNT_ID` – Found on the main Cloudflare dashboard.
-- Optional: add `EMAILJS_*` secrets if you prefer storing contact-form keys as repository secrets and mapping them to Cloudflare environment variables (see next section).
-
-Once the secrets are in place, every push to `main` will build (`npm install && npm run build`) and publish the `dist` folder to Cloudflare Pages automatically.
-
-### Manual CLI Deployment
-
-If you prefer deploying from your machine:
-
-```bash
-# Authenticate once (opens a browser window)
----
-
-# Build the production bundle
-npm run build
-
-# Deploy using the settings from wrangler.toml
-npx wrangler pages deploy dist
-```
-
-The `wrangler.toml` file in the project root sets the project name (`michaels-personal-portfolio`) and build output folder so you don't have to pass extra flags.
-
-### Environment Variables on Cloudflare
-
-The contact form depends on EmailJS credentials defined in `.env.example`:
-
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID`
-- `VITE_EMAILJS_PUBLIC_KEY`
-
-Add these as **Environment Variables** within your Cloudflare Pages project (`Project Settings → Environment Variables`). Use the "Production" environment for the live site and "Preview" for preview deployments. Values cascade to branch previews built by the workflow.
-
-### Post-Deployment Tasks
-
-- Confirm the production build at your new Cloudflare Pages URL and paste it into the `Live Demo` badge above.
-- Enable analytics, custom domains, or redirects through the Cloudflare Pages dashboard as needed.
-- If you use EmailJS, add your Cloudflare Pages domain to the "Authorized Origins" list in EmailJS to allow requests from the deployed site.
 
 ## 📁 Project Structure
 
@@ -371,7 +312,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-**Michael** - 4th Year Computer Science Student
+**Michael** - Software Developer
 
 - GitHub: [@mk23rd](https://github.com/mk23rd)
 - Project Link: [https://github.com/mk23rd/PersonalPortfolio](https://github.com/mk23rd/PersonalPortfolio)
@@ -395,6 +336,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### ⭐ Star this repository if you find it helpful!
 
-Made with ❤️ by Michael
+
 
 </div>

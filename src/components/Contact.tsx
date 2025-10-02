@@ -64,9 +64,13 @@ const Contact = () => {
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Email send failed", error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "EmailJS rejected the request. Check your service/template configuration.";
       toast({
         title: "Something went wrong",
-        description: "Your message couldn't be delivered. Please try again later.",
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {

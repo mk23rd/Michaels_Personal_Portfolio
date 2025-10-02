@@ -112,7 +112,15 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-md;
+    background-color: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 0 20px 45px -20px hsl(var(--foreground) / 0.15);
+  }
+  .dark .glass-card {
+    background-color: hsl(var(--card) / 0.4);
+    border-color: hsl(var(--border) / 0.6);
+    box-shadow: 0 20px 55px -25px hsl(220 40% 10% / 0.6);
   }
   
   .text-gradient {

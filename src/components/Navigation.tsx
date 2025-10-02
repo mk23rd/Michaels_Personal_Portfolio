@@ -2,11 +2,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
+  // Track whether the mobile drawer is open for responsive layouts.
   const [isOpen, setIsOpen] = useState(false);
+  // Adds a subtle shadow/background once the user scrolls past the hero.
   const [scrolled, setScrolled] = useState(false);
 
+  // Centralized definition of anchor links keeps desktop/mobile navigation in sync.
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "Projects", href: "#projects" },
@@ -30,24 +34,28 @@ const Navigation = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-    
+
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-      scrolled ? "py-3 bg-white/80 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"
-    )}>
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        scrolled
+          ? "py-3 bg-background/80 backdrop-blur-md shadow-sm"
+          : "py-6 bg-transparent"
+      )}
+    >
       <div className="section-container flex items-center justify-between">
         <a href="#home" className="text-xl font-semibold">
           <span className="text-gradient">Michael's Portfolio</span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -57,16 +65,22 @@ const Navigation = () => {
               {link.name}
             </a>
           ))}
+          {/* Provide an always-visible theme toggle on larger screens. */}
+          <ThemeToggle variant="ghost" />
         </nav>
 
         {/* Mobile Nav Toggle */}
-        <button 
-          className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          {/* Theme toggle stays accessible even when the menu is closed. */}
+          <ThemeToggle variant="ghost" />
+          <button
+            className="p-2 rounded-full hover:bg-secondary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -89,6 +103,10 @@ const Navigation = () => {
               {link.name}
             </a>
           ))}
+          <div className="mt-auto pt-8">
+            {/* Full-width toggle offers the same UX parity inside the drawer. */}
+            <ThemeToggle className="w-full justify-center" />
+          </div>
         </div>
       </div>
     </header>

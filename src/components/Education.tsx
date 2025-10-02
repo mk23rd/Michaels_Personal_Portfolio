@@ -4,6 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 import EducationItem from "./EducationItem";
 
 const Education = () => {
+  // Timeline entries mix academic milestones, internships, and certifications.
   const educationData = [
     {
       period: "2021 - October 2025",
@@ -35,7 +36,7 @@ const Education = () => {
     },
     {
       period: "2024",
-      degree: "Professional Foundation Certificate",
+      degree: "Professional Foundation Certificate From ALX Ethiopia",
       institution: "Professional Development Program",
       description: "Completed an intensive program focused on teamwork, communication, and workplace professionalism.",
       icon: <Award size={24} />
@@ -51,7 +52,7 @@ const Education = () => {
       period: "2020",
       degree: "High School Diploma",
       institution: "Ethio Parent's School",
-      description: "Graduated with honors while leading the school coding club and STEM outreach initiatives.",
+      description: "Graduated with a 521 Score on my 12th Gade National Examination.",
       icon: <Award size={24} />
     }
   ];
@@ -71,6 +72,7 @@ const Education = () => {
           </p>
         </div>
         
+        {/* Each EducationItem handles icon + description layout. */}
         <div className="max-w-3xl mx-auto">
           {educationData.map((item, index) => (
             <EducationItem

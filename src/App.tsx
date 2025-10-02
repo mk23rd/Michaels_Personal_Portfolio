@@ -8,9 +8,14 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+/**
+ * Application root that wires up global providers (query client, tooltips, toasters, routing).
+ * Keeping providers close to the entry point makes it easy to reason about cross-cutting concerns.
+ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      {/* Toast systems for both Shadcn UI and Sonner notifications */}
       <Toaster />
       <Sonner />
       <BrowserRouter>

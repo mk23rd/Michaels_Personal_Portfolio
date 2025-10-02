@@ -10,8 +10,8 @@ const Hero = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-[30%] -right-[20%] w-[80%] h-[80%] rounded-full bg-gradient-to-br from-blue-50 to-indigo-100 blur-3xl opacity-70"></div>
-        <div className="absolute -bottom-[30%] -left-[20%] w-[80%] h-[80%] rounded-full bg-gradient-to-tr from-blue-50 to-indigo-100 blur-3xl opacity-70"></div>
+        <div className="absolute -top-[30%] -right-[20%] w-[80%] h-[80%] rounded-full bg-gradient-to-br from-blue-50 to-indigo-100 blur-3xl opacity-70 dark:from-indigo-900/40 dark:to-slate-900/30"></div>
+        <div className="absolute -bottom-[30%] -left-[20%] w-[80%] h-[80%] rounded-full bg-gradient-to-tr from-blue-50 to-indigo-100 blur-3xl opacity-70 dark:from-indigo-900/40 dark:to-slate-900/30"></div>
       </div>
 
       <div className="section-container flex flex-col items-center justify-center text-center">

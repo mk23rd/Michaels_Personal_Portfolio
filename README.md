@@ -63,6 +63,7 @@ The website serves as a comprehensive platform to:
 - **Component Library** - Powered by shadcn/ui and Radix UI for accessible components
 - **Form Validation** - React Hook Form with Zod schema validation
 - **Routing** - Client-side routing with React Router DOM
+- **Email Delivery** - Contact form sends messages via EmailJS directly to your inbox
 
 ### 📱 Sections
 - **Hero Section** - Eye-catching introduction with animated text
@@ -148,6 +149,12 @@ Before you begin, ensure you have the following installed on your system:
    npm install
    # or if you use bun
    bun install
+   ```
+
+4. **Configure environment variables**
+   ```bash
+   cp .env.example .env
+   # Fill in the EmailJS keys used by the contact form
    ```
 
 ### Running the Project
@@ -260,6 +267,7 @@ Locally preview the production build
 4. **Contact Information** - Update `src/components/Contact.tsx`
    - Modify contact form settings
    - Update social media links
+   - Supply EmailJS service/template IDs in `.env`
 
 ### Styling & Theme
 

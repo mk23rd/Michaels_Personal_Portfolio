@@ -13,6 +13,7 @@ interface ProjectCardProps {
   index: number;
 }
 
+// Presentational card used by the Projects grid with hover animation + optional links.
 const ProjectCard = ({
   title,
   description,
@@ -62,7 +63,7 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        
+
   <h3 className="text-xl font-bold mb-2 break-words text-foreground">{title}</h3>
         <p className="text-muted-foreground text-sm mb-4">{description}</p>
         

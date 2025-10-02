@@ -4,6 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
+  // High-level capabilities shown as cards above the proficiency bars.
   const skillsData = [
     {
       icon: <Code size={24} />,
@@ -43,6 +44,7 @@ const Skills = () => {
     }
   ];
 
+  // Percentage values feed into animated progress bars for quick scanning.
   const technicalSkills = [
     { name: "JavaScript", proficiency: 60 },
     { name: "React", proficiency: 45 },
@@ -60,7 +62,7 @@ const Skills = () => {
     <AnimatedSection id="skills" className="py-24 bg-secondary/50">
       <div className="section-container">
         <div className="text-center mb-16">
-          <span className="text-sm font-medium px-3 py-1 rounded-full bg-white text-foreground/80 inline-block mb-4">
+          <span className="text-sm font-medium px-3 py-1 rounded-full bg-secondary text-foreground/80 inline-block mb-4 dark:bg-secondary/60">
             My Skills
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

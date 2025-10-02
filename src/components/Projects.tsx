@@ -3,6 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+  // Curated list of portfolio highlights; adjust tags to control the pill badges.
   const featuredProjects = [
     {
       title: "Risk_Integrated_Crowdfunding_and_Investment_Platform",
@@ -42,6 +43,7 @@ const Projects = () => {
             development, and problem-solving across various domains.
           </p>
         </div>
+        {/* Responsive grid renders cards with staggered animations handled inside ProjectCard. */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <ProjectCard

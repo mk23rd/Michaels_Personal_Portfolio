@@ -85,10 +85,10 @@ const Navigation = () => {
 
       {/* Mobile Nav */}
       <div className={cn(
-        "fixed inset-0 bg-background z-40 md:hidden transition-transform duration-300 ease-in-out",
+        "fixed inset-0 z-40 bg-background md:hidden transition-transform duration-300 ease-in-out",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
-        <div className="flex flex-col h-full p-8 pt-24">
+        <div className="flex h-full flex-col gap-2 overflow-y-auto overscroll-contain p-8 pt-24 pb-16">
           {navLinks.map((link, index) => (
             <a
               key={link.name}

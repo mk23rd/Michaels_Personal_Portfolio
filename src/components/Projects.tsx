@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Risk_Integrated_Crowdfunding_and_Investment_Platform",
       description: "A modern web application built with React, Vite, and GSAP that helps teams launch transparent, risk-aware crowdfunding campaigns. Final year capstone project with end-to-end investor protection flows.",
       tags: ["React", "Vite", "GSAP", "Firebase"],
-      image: "/placeholder.svg",
+      image: "/Lawata.png",
       githubUrl: "https://github.com/mk23rd/Risk_Integrated_Crowdfunding_and_Investment_Platform"
     },
     {
@@ -17,6 +17,7 @@ const Projects = () => {
       description: "Python-based translation assistant that integrates OpenAI APIs to translate across multiple languages with contextual accuracy.",
       tags: ["Python", "OpenAI", "CLI"],
       image: "/placeholder.svg",
+      video: "/coming soon.mp4",
       githubUrl: "https://github.com/mk23rd/OpenAI_Translator"
     },
     {
@@ -24,6 +25,7 @@ const Projects = () => {
       description: "Academic advisor expert system crafted in Prolog to recommend courses and pathways based on student goals and prerequisites.",
       tags: ["Prolog", "Expert System", "AI"],
       image: "/placeholder.svg",
+      video: "/coming soon.mp4",
       githubUrl: "https://github.com/mk23rd/Mini_Expert_System_Prolog"
     }
   ];
@@ -51,6 +53,7 @@ const Projects = () => {
               title={project.title}
               description={project.description}
               image={project.image}
+              video={project.video}
               tags={project.tags}
               githubUrl={project.githubUrl}
               index={index}

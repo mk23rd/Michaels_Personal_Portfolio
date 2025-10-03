@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  video?: string;
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -18,12 +19,15 @@ const ProjectCard = ({
   title,
   description,
   image,
+  video,
   tags,
   liveUrl,
   githubUrl,
   index
 }: ProjectCardProps) => {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false);
+  const displayImage = image ?? "/placeholder.svg";
+  const hasVideo = Boolean(video);
 
   return (
     <div 
@@ -34,23 +38,45 @@ const ProjectCard = ({
       )}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="aspect-video overflow-hidden">
+      <div className="aspect-video overflow-hidden relative">
         <div className={cn(
           "absolute inset-0 bg-gray-100 animate-pulse z-0",
-          isImageLoaded ? "hidden" : "block"
+          isMediaLoaded ? "hidden" : "block"
         )} />
-        <img
-          src={image}
-          alt={title}
-          className={cn(
-            "w-full h-full object-cover transition-all duration-500 group-hover:scale-105",
-            isImageLoaded ? "opacity-100" : "opacity-0"
-          )}
-          onLoad={() => setIsImageLoaded(true)}
-        />
+        {hasVideo ? (
+          <video
+            key={video}
+            className={cn(
+              "relative z-10 h-full w-full object-cover transition-all duration-500 group-hover:scale-105",
+              isMediaLoaded ? "opacity-100" : "opacity-0"
+            )}
+            poster={displayImage}
+            muted
+            loop
+            playsInline
+            autoPlay
+            controls
+            preload="metadata"
+            onLoadedData={() => setIsMediaLoaded(true)}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            src={displayImage}
+            alt={title}
+            loading="lazy"
+            className={cn(
+              "relative z-10 h-full w-full object-cover transition-all duration-500 group-hover:scale-105",
+              isMediaLoaded ? "opacity-100" : "opacity-0"
+            )}
+            onLoad={() => setIsMediaLoaded(true)}
+          />
+        )}
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       
       <div className="relative p-6">
         <div className="flex flex-wrap gap-2 mb-4">
